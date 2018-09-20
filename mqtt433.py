@@ -49,7 +49,7 @@ traceback_template = '''Traceback (most recent call last):
 
 mqttc = mqtt.Client("python_pub")
 mqttc.on_connect=on_connect
-mqttc.username_pw_set(username="homeassistant", password="hassAPI9")
+mqttc.username_pw_set(username="homeassistant", password="mqttAPI9")
 mqttc.loop_start()
 logger.info("connecting to broker")
 mqttc.connect("localhost", port=1883)
