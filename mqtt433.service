@@ -1,0 +1,15 @@
+ [Unit]
+ Description=MQTT433 RTL433 Service
+ After=multi-user.target
+
+ [Service]
+ Type=idle
+ User=root
+ Environment=PYTHONPATH=$PYTHONPATH:/home/pi/.local/lib/python2.7/site-packages 
+ WorkingDirectory=/home/homeassistant/.homeassistant/mqtt433 
+ ExecStart=/usr/bin/python2.7 /home/homeassistant/.homeassistant/mqtt433/mqtt433.py
+ Restart=always
+
+ [Install]
+ WantedBy=multi-user.target
+
