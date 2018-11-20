@@ -87,7 +87,7 @@ while not mqttc.connected_flag:
 
 logger.info("main loop")
 
-proc = subprocess.Popen(['rtl_433', '-F', 'json', '-R', '40', '-R', '74'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+proc = subprocess.Popen(['rtl_433', '-F', 'json', '-R', '40', '-R', '74', '-R', '55'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 while True:
 #    logger.debug("listening")
